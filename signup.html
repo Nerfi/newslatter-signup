@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <!-- Favicons -->
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+
 <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
@@ -28,13 +28,14 @@
   </head>
   <body class="text-center">
 
-    <form class="form-signin">
-  <img class="mb-4" src="https://images.unsplash.com/photo-1581943053657-588f7f653f50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Sign up to my news letter</h1>
+    <form  action="/signup" class="form-signin" method="Post">
 
-   <input type="text"class="form-control top" placeholder="First Name" required autofocus>
-   <input type="text"  class="form-control middle" placeholder="Last Name" required autofocus>
-  <input type="email"  class="form-control botton" placeholder="Email" required>
+    <img class="mb-4" src="https://images.unsplash.com/photo-1581943053657-588f7f653f50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Sign up to my news letter</h1>
+
+   <input type="text"class="form-control top" name="First" placeholder="First Name" required autofocus>
+   <input type="text"  class="form-control middle" name="Last" placeholder="Last Name" required autofocus>
+  <input type="email"  class="form-control botton" name="email" placeholder="Email" required>
 
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me up</button>
 
