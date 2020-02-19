@@ -68,7 +68,7 @@ app.post("/signup", function(req, res){
     request(options, function(error, response, body) {
          if(error){
           res.sendFile(__dirname + "/failure.html");
-          res.send("there was an error")
+
          }else {
           res.sendFile(__dirname + "/succes.html");
          }
