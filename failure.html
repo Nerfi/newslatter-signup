@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Failurre page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+  <div class="jumbotron">
+  <h1 class="display-4">Ups!</h1>
+  <p class="lead">There was an error proccesing your information.</p>
+  <hr class="my-4">
+  <p> try again and watch out for typos</p>
+
+  <form action="/failure" method="post">
+    <!-- once I click on the button I go straight to the /failure route that I have defined
+      and In that route I got redirect to the main page after a click on the button
+     -->
+    <button class="btn btn-lg btn-warning">Try again</button>
+  </form>
+
+</div>
+
+
+</body>
+</html>

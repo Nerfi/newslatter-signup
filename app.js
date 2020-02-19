@@ -1,3 +1,4 @@
+
 const express = require("express");
 const app = express();
 //requesting bodyParser
@@ -9,6 +10,8 @@ const request = require('request');
 const port = 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
+  const config = require("./config.js");
+const myKey = config.MY_KEY;
 
 
 // in order to render static files we need to use the
@@ -53,7 +56,7 @@ app.post("/signup", function(req, res){
       url: 'https://us4.api.mailchimp.com/3.0/lists/5047c3168f',
       method: "POST",
       headers: {
-        "Authorization": "juan 1564a3f47406be89972dddfa8c910d06-us4"
+        "Authorization": "juan " + myKey
       },
       body: dataJson
 
@@ -61,15 +64,19 @@ app.post("/signup", function(req, res){
     }
 
     request(options, function(error, response, body) {
-
-        if(error) {
-          console.log(error)
-        } else {
-          console.log(response.statusCode);
-        }
+         if(error){
+          res.sendFile(__dirname + "/failure.html");
+          res.send("there was an error")
+         }else {
+          res.sendFile(__dirname + "/succes.html");
+         }
     })
 })
 
+//creatying our failure route
 
-// API KEY 1564a3f47406be89972dddfa8c910d06-us4
-// list ID 5047c3168f
+app.post("/failure", function(req,res) {
+
+  //when we get to the failure page we redirect the user to the home page
+  res.redirect("/");
+});
