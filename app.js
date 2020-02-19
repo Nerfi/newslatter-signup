@@ -11,8 +11,9 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 //requiring the file needed.
-const config = require("./config.js");
-const myKey = config.MY_KEY || process.env.MY_KEY;
+//const config = require("./config.js");
+//const myKey = config.MY_KEY || process.env.MY_KEY;
+const myKey = process.env.MY_KEY;
 
 
 // in order to render static files we need to use the
