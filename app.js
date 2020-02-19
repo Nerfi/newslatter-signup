@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //requiring the file needed.
 //const config = require("./config.js");
 //const myKey = config.MY_KEY || process.env.MY_KEY;
+//delete config.js file.
 const myKey = process.env.MY_KEY;
 
 
