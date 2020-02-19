@@ -10,7 +10,8 @@ const request = require('request');
 const port = 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
-  const config = require("./config.js");
+//requiring the file needed.
+const config = require("./config.js");
 const myKey = config.MY_KEY;
 
 
@@ -18,8 +19,9 @@ const myKey = config.MY_KEY;
 //static method of express by passing "public" we
 
 app.use(express.static("public"));
+//process.env.PORT is a dynamic port that Heroku will run
 
-app.listen(port, function(req,res){
+app.listen( process.env.PORT || port, function(req,res){
   console.log("express working bitch");
 })
 
